@@ -8,51 +8,44 @@ using namespace std;
 #define User "123"
 #define Pass "123"
 
-/*Practica (grupal):
+/*Pr�ctica (grupal):
 1) Desarrolle el siguiente problema en base a los conceptos dados en
 clase:
-La universidad XYZ necesita desarrollar un sistema online en el cual sus
+La universidad XYZ necesita desarrollar un sistema online en el cualsus
 estudiantes puedan revisar su estado de los tickets para quejas y sugerencias.
-Para esto, se necesita desarrollar la lógica inicial de la siguiente manera:
-
-A. Los usuarios(Estudiantes) deberán ingresar sus respectivas
-credenciales(usuario y contraseña) qué, inicialmente se las otorga el
-propio sistema de la universidad. (Se debe tomar en consideración 
-que la institución universitaria, solo otorga este sistema a los 
-usuarios que mantengan una matrícula activa).
-
-B. Una vez el cliente haya ingresado por primera vez al sistema, el
+Para esto, se necesita desarrollar la l�gica inicial de la siguiente manera:
+a. Los usuarios(Estudiantes) deber�n ingresarsusrespectivas
+credenciales(usuario y contrase�a) qu�, inicialmente se las otorga el
+propio sistema de la universidad. (Se debe tomar en consideraci�n
+que la instituci�n universitaria, solo otorga este sistema a los
+usuarios que mantengan una matr�cula activa).
+b. Una vez el cliente haya ingresado por primera vez al sistema, el
 mismo debe mostrar la fecha y hora de ingreso. Y, a su vez, le debe
-pedir que actualice (cambie) la contraseña.
-
-C. Luego de haber cambiado la contraseña, elsistema debe mostrar al
-cliente un menú con el siguiente formato:
-
-1) Subir un ticket: Deberá permitir que el usuario ingrese la 
-información para el envío de su ticket siguiendo el siguiente patrón: 
-nombre, apellido, identificación, correo y carrera que estudia; 
+pedir que actualice (cambie) la contrase�a.
+c. Luego de haber cambiado la contrase�a, elsistema debe mostrar al
+cliente un men� con el siguiente formato:
+1) Subir un ticket: Deber� permitir que el usuario ingrese la
+informaci�n para el env�o de su ticket siguiendo el siguiente patr�n:
+nombre, apellido, identificaci�n, correo y carrera que estudia;
 seguido por el ticket que desee enviar.
-Una vez enviado el ticket, el mismo deberá generar un código o 
-identificador del ticket.
-
-2) Ver tickets: El usuario podrá el código o identificador de los tickets 
-que haya creado en el sistema.
-
+Una vez enviado el ticket, el mismo deber� generar un c�digo o
+identificador del ticket
+2) Ver tickets: El usuario podr� el c�digo o identificador de los tickets
+que haya creado en el sistema
 3) Salir: Termina el proceso y debe mostrar la fecha y hora en la que el
-cliente cerró la sesión.*/
+cliente cerr� la sesi�n*/
 
 /*Integrantes: Juan Massa, David Lopez, Israel Castillo, Luis Zhang, Saul Rojas*/
 
 /*User y password inicial: 123/123*/
 
-using namespace std;
 int main(){
-    string username, password, id, email, mess;
+    string username, password, npassword, id, email, mess, nom, carrera;
     int intentos, lin=1, o;
     bool ingreso, activa, inactiva;
-    char matricula, nom, apell;
+    char matricula, apell;
 
-	//Estado de Matricula
+    //Estado de Matricula
     if (matricula == inactiva){
         inactiva = false;
     }
@@ -60,11 +53,13 @@ int main(){
         activa = true;
     }
 
-    matricula = activa;
-	
+    //estado de matricula
+    matricula=inactiva;
+
     //Sistema para Iniciar seccion
     login:
-    do{
+    do
+    {
         system("cls");
         cout << "\t\t\tIngreso de Estudiante"<<endl;
         cout << "\nUsername: ";cin>>username;
@@ -106,11 +101,11 @@ int main(){
         system("cls");
         cout << "Bienvenido al systema de ticket de la Universidad."<<endl;
         cout << "Favor de llenar los requisitos para su ticket."<<endl;
-        cout << "Nombre: "<<endl; cin>>nom; 
-        cout << "Apellido: "<<endl; cin>>apell;
-        cout << "Identificación "<<endl; cin>>id;
-        cout << "Correo y carrera que estudia: "<<endl; cin>>email;
-		cout << "Mensaje: "<<endl;cin>>mess;
+        cout << "Nombre: "; cin>>nom; cout << "Apellido: "; cin>>apell;
+        cout << "Identificacion "; cin>>id;
+        cout << "Correo electronico: "; cin>>email;
+        cout << "carrera que estudia: "; cin>>carrera;
+        cout << "Mensaje: "<<endl; cin>>mess;
         break;
     
     case 2:
@@ -123,10 +118,10 @@ int main(){
         goto s;    
     }
 
-	//Salir
+
     s:
     system("cls");
     cout << "Que tenga un buen dia."<<endl;
 
-	return 0;
+    return 0;
 }
