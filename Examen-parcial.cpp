@@ -40,8 +40,8 @@ cliente cerró la sesión.*/
 /*User y password inicial: 123/123*/
 
 int main(){
-    string username, password, npassword, id, email, mess, nom, carrera;
-    int intentos, o;
+    string username, password, id, email, mess, nom, carrera;
+    int intentos, lin=1, o;
     bool ingreso, activa, inactiva;
     char matricula, apell;
 
@@ -54,6 +54,8 @@ int main(){
     }
 
     //estado de matricula
+    //Cambiar a activa para activar la cuenta
+    //Cambiar a inactiva para inactivar la cuenta
     matricula=inactiva;
 
     //Sistema para Iniciar seccion
